@@ -13,34 +13,96 @@
     </header>
 
     <section class="productos">
+        <!-- Producto 1 -->
         <div class="producto">
             <h2>Tom Mediano</h2>
+            <img src="img/tom-mediano.jpg" alt="Tom Mediano">
             <p class="precio">Ref. 1.1</p>
-            <h3>Disponible</h3>
+            <button onclick="agregarAlCarrito('Tom Mediano', 1.1)">Agregar al carrito</button>
         </div>
+        <!-- Producto 2 -->
         <div class="producto">
             <h2>Samba Fresa</h2>
+            <img src="img/samba-fresa.jpg" alt="Samba Fresa">
             <p class="precio">Ref. 0.9</p>
-            <h3>Disponible</h3>
+            <button onclick="agregarAlCarrito('Samba Fresa', 0.9)">Agregar al carrito</button>
         </div>
+        <!-- Producto 3 -->
         <div class="producto">
             <h2>Flaquito</h2>
+            <img src="img/flaquito.jpg" alt="Flaquito">
             <p class="precio">Ref. 0.5</p>
-            <h3>Disponible</h3>
-        </div>
-        <div class="producto">
-            <h2>Cheese Tris Mediano</h2>
-            <p class="precio">Ref. 1.0</p>
-            <h3>Disponible</h3>
+            <button onclick="agregarAlCarrito('Flaquito', 0.5)">Agregar al carrito</button>
         </div>
     </section>
 
-    <footer style="
-        position: absolute;
-        width: 100%;
-        bottom:0;
-    ">
+    <!-- Carrito de compras -->
+    <section class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista"></ul>
+        <p>Total: <span id="total-precio">0.00</span> USD</p>
+        <button onclick="realizarPago()">Realizar Pago</button>
+        <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+    </section>
+
+    <!-- Métodos de pago -->
+    <section class="metodos-pago">
+        <h2>Métodos de Pago</h2>
+        <p>Selecciona tu método de pago preferido:</p>
+        <label><input type="radio" name="metodo-pago" value="pago-movil" checked> Pago Móvil</label><br>
+        <label><input type="radio" name="metodo-pago" value="efectivo"> Efectivo</label><br>
+        <label><input type="radio" name="metodo-pago" value="chinchin"> Chinchin</label>
+    </section>    
+
+    <footer>
         <p>&copy; 2024 Bodega Osman</p>
     </footer>
+
+    <script>
+        let carrito = [];
+let total = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    total += precio;
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoLista = document.getElementById("carrito-lista");
+    carritoLista.innerHTML = '';
+    carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - $${item.precio}`;
+        carritoLista.appendChild(li);
+    });
+    document.getElementById("total-precio").textContent = total.toFixed(2);
+}
+
+function limpiarCarrito() {
+    carrito = [];       // Vaciar el array de carrito
+    total = 0;          // Reiniciar el total a cero
+    actualizarCarrito(); // Actualizar el carrito en pantalla
+}
+
+function realizarPago() {
+    const metodo = document.querySelector('input[name="metodo-pago"]:checked').value;
+    let mensaje = `*Bodega Osman - Pedido*\n\nMétodo de Pago: ${metodo}\n\n*Carrito de Compras:*\n`;
+    
+    carrito.forEach(item => {
+        mensaje += `- ${item.nombre}: $${item.precio}\n`;
+    });
+    
+    mensaje += `\n*Total:* $${total.toFixed(2)}`;
+
+    // Reemplaza '1234567890' con tu número de WhatsApp
+    const numeroWhatsApp = '+584142079800';
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir WhatsApp en una nueva ventana
+    window.open(urlWhatsApp, '_blank');
+}
+
+    </script>
 </body>
 </html>
