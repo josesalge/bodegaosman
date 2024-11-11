@@ -83,24 +83,46 @@ button:hover {
     border: 2px solid #003366;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px auto;  /* Centrado con margen automático */
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .carrito h2 {
     color: #003366;
+    margin-bottom: 10px;
 }
 
-#carrito-lista {
-    list-style: none;
-    margin-top: 10px;
+.carrito ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
-#carrito-lista li {
-    padding: 8px;
-    border-bottom: 1px solid #003366;
+.carrito li {
+    margin-bottom: 10px;
+}
+
+.carrito p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
+}
+
+.carrito button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrito button:hover {
+    background-color: #003366;
 }
 
 #total-precio {
@@ -108,7 +130,6 @@ button:hover {
     color: #0066cc;
 }
 
-/* Métodos de pago */
 .metodos-pago {
     background-color: #e6f2ff;
     border: 2px solid #003366;
@@ -118,20 +139,42 @@ button:hover {
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;  /* Centra el contenido */
 }
 
 .metodos-pago h2 {
     color: #003366;
+    margin-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin: 10px 0;
+.metodos-pago p {
+    margin-bottom: 10px;
+}
+
+.metodos-pago label {
+    display: inline-block; /* Muestra las opciones en línea */
+    margin-right: 20px;  /* Espacio entre los métodos */
     color: #003366;
+    font-size: 1.1em;
 }
 
 input[type="radio"] {
-    margin-right: 5px;
+    margin-right: 5px; /* Espacio entre el radio button y el texto */
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #003366;
 }
 
 footer {
