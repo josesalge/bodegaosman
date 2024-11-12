@@ -324,3 +324,52 @@ footer {
         opacity: 0;
     }
 }
+
+/* Estilo para el popup de datos de pago */
+#datosPagoPopup {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #333;
+    padding: 3x;
+    /* Más espacio alrededor del contenido */
+    border: 2px solid #003366;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    /* Popup más grande */
+}
+
+#datosPagoPopup.show {
+    display: block;
+    /* Muestra el popup cuando se activa */
+}
+
+#datosPagoPopup h3 {
+    margin-bottom: 20px;
+    /* Espacio entre el título y los datos */
+}
+
+#datosPagoPopup p {
+    margin-bottom: 15px;
+    /* Espacio entre cada campo */
+}
+
+#datosPagoPopup button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#datosPagoPopup button:hover {
+    background-color: #003366;
+}
