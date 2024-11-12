@@ -4,6 +4,7 @@
 
 /* Consulta de medios para pantallas pequeñas (teléfonos) */
 @media (max-width: 600px) {
+
     /* Ajustar la estructura del header en pantallas pequeñas */
     header {
         flex-direction: column;
@@ -18,7 +19,8 @@
     }
 
     .header-logo img.logo {
-        width: 60px; /* Tamaño reducido para el logo en móvil */
+        width: 60px;
+        /* Tamaño reducido para el logo en móvil */
         height: auto;
     }
 
@@ -27,15 +29,18 @@
     }
 
     .header-empty {
-        display: none; /* Oculta el espacio vacío en el header para móviles */
+        display: none;
+        /* Oculta el espacio vacío en el header para móviles */
     }
 
     .header-content h1 {
-        font-size: 1.5em; /* Tamaño de fuente ajustado para móviles */
+        font-size: 1.5em;
+        /* Tamaño de fuente ajustado para móviles */
     }
 
     .header-content p {
-        font-size: 1em; /* Tamaño de fuente ajustado para móviles */
+        font-size: 1em;
+        /* Tamaño de fuente ajustado para móviles */
     }
 
     /* Ajustar el ancho de los productos para que se adapten en pantallas pequeñas */
@@ -46,7 +51,8 @@
     }
 
     .producto {
-        width: 150px; /* Tamaño ajustado para que las tarjetas de productos se acomoden en móviles */
+        width: 150px;
+        /* Tamaño ajustado para que las tarjetas de productos se acomoden en móviles */
         padding: 10px;
     }
 }
@@ -69,27 +75,32 @@ body {
 
 header {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos */
     background-color: #003366;
     color: #fff;
     padding: 20px;
 }
 
 .header-logo {
-    flex: 1; /* Ocupa espacio a la izquierda */
+    flex: 1;
+    /* Ocupa espacio a la izquierda */
 }
 
 .header-content {
-    flex: 2; /* Ocupa más espacio en el centro */
+    flex: 2;
+    /* Ocupa más espacio en el centro */
     text-align: center;
 }
 
 .header-empty {
-    flex: 1; /* Espacio vacío a la derecha para equilibrar */
+    flex: 1;
+    /* Espacio vacío a la derecha para equilibrar */
 }
 
 .logo {
-    width: 80px; /* Ajusta el tamaño del logo */
+    width: 80px;
+    /* Ajusta el tamaño del logo */
     height: auto;
 }
 
@@ -120,9 +131,12 @@ header p {
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column; /* Alinea el contenido verticalmente */
-    justify-content: space-between; /* Espacio entre los elementos para empujar el botón al fondo */
-    height: 320px; /* Altura fija para que todas las tarjetas tengan el mismo tamaño */
+    flex-direction: column;
+    /* Alinea el contenido verticalmente */
+    justify-content: space-between;
+    /* Espacio entre los elementos para empujar el botón al fondo */
+    height: 320px;
+    /* Altura fija para que todas las tarjetas tengan el mismo tamaño */
 }
 
 .producto img {
@@ -165,7 +179,8 @@ button:hover {
     border: 2px solid #003366;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;  /* Centrado con margen automático */
+    margin: 20px auto;
+    /* Centrado con margen automático */
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -221,7 +236,8 @@ button:hover {
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;  /* Centra el contenido */
+    text-align: center;
+    /* Centra el contenido */
 }
 
 .metodos-pago h2 {
@@ -234,14 +250,17 @@ button:hover {
 }
 
 .metodos-pago label {
-    display: inline-block; /* Muestra las opciones en línea */
-    margin-right: 20px;  /* Espacio entre los métodos */
+    display: inline-block;
+    /* Muestra las opciones en línea */
+    margin-right: 20px;
+    /* Espacio entre los métodos */
     color: #003366;
     font-size: 1.1em;
 }
 
 input[type="radio"] {
-    margin-right: 5px; /* Espacio entre el radio button y el texto */
+    margin-right: 5px;
+    /* Espacio entre el radio button y el texto */
 }
 
 button {
@@ -267,4 +286,41 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilos para el pop-up */
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6a8fdf;
+    /* Color de fondo brillante */
+    color: #ffffff;
+    /* Color de texto oscuro para contraste */
+    padding: 15px 20px;
+    border: 2px solid #0e0d0d;
+    /* Borde naranja */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+/* Animación para el desvanecimiento */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

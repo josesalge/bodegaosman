@@ -1,185 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bodega Osman</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-logo">
-           <img src="img/logo.jpeg" alt="Logo Bodega Osman" class="logo" />
-        </div>
-        <div class="header-content">
-           <h1>Bodega Osman</h1>
-           <p>
-              Bienvenidos a la bodega Osman, donde encontrarás productos de calidad a los mejores precios.
-           </p>
-        </div>
-        <div class="header-empty"></div>
-     </header>
+      <div class="header-logo">
+        <img src="img/logo.jpeg" alt="Logo Bodega Osman" class="logo" />
+      </div>
+      <div class="header-content">
+        <h1>Bodega Osman</h1>
+        <p>
+          Bienvenidos a la bodega Osman, donde encontrarás productos de calidad
+          a los mejores precios.
+        </p>
+      </div>
+      <div class="header-empty"></div>
+    </header>
 
     <section class="productos">
-        <!-- Producto 1 -->
-        <div class="producto">
-            <h2>Tom Mediano</h2>
-            <img src="https://www.tiendashoppi.com/cdn/shop/files/tienda-shoppi-tom-platanito-min.jpg?v=1694011589" alt="Tom Mediano">
-            <p class="precio">Ref. 1.1</p>
-            <button onclick="agregarAlCarrito('Tom Mediano', 1.1)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 2 -->
-        <div class="producto">
-            <h2>Samba Fresa</h2>
-            <img src="https://grupoleiros.com/image/leiros/GUCM0946.png" alt="Samba Fresa">
-            <p class="precio">Ref. 0.9</p>
-            <button onclick="agregarAlCarrito('Samba Fresa', 0.9)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Flaquito Rojo</h2>
-            <img src="https://www.idheastore.com/store/wp-content/uploads/Diseno-sin-titulo-96.png" alt="Flaquito Rojo">
-            <p class="precio">Ref. 0.5</p>
-            <button onclick="agregarAlCarrito('Flaquito Rojo', 0.5)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Flaquito Blanco</h2>
-            <img src="https://chocolatesstmoritz.com/wp-content/uploads/2016/05/stmoritz_flaquito_b_01.jpg" alt="Flaquito Blanco">
-            <p class="precio">Ref. 0.5</p>
-            <button onclick="agregarAlCarrito('Flaquito Blanco', 0.5)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Galleta Kraker</h2>
-            <img src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10010244un_4.jpg" alt="Galleta Kraker">
-            <p class="precio">Ref. 0.4</p>
-            <button onclick="agregarAlCarrito('Galleta Kraker', 0.4)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Galleta Hony</h2>
-            <img src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10010243un_4.jpg" alt="Galleta Hony">
-            <p class="precio">Ref. 0.4</p>
-            <button onclick="agregarAlCarrito('Galleta Hony', 0.4)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Club Social</h2>
-            <img src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10003699un_4.jpg" alt="Galleta Club Social">
-            <p class="precio">Ref. 0.4</p>
-            <button onclick="agregarAlCarrito('Galleta Club Social', 0.4)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Doritos</h2>
-            <img src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10008036un_3.jpg" alt="Doritos">
-            <p class="precio">Ref. 1.1</p>
-            <button onclick="agregarAlCarrito('Doritos', 1.1)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Toronto</h2>
-            <img src="https://cdnx.jumpseller.com/tu-super-tm/image/15643891/resize/540/540?1647357068" alt="Toronto">
-            <p class="precio">Ref. 0.6</p>
-            <button onclick="agregarAlCarrito('Toronto', 0.6)">Agregar al carrito</button>
-        </div>
-        <!-- Producto 3 -->
-        <div class="producto">
-            <h2>Milka</h2>
-            <img src="https://www.tiendashoppi.com/cdn/shop/products/tienda-shoppi-milka-oreo-min.jpg?v=1671828543" alt="Milka">
-            <p class="precio">Ref. 2.0</p>
-            <button onclick="agregarAlCarrito('Milka', 2.0)">Agregar al carrito</button>
-        </div>
+      <!-- Producto 1 -->
+      <div class="producto">
+        <h2>Tom Mediano</h2>
+        <img
+          src="https://www.tiendashoppi.com/cdn/shop/files/tienda-shoppi-tom-platanito-min.jpg?v=1694011589"
+          alt="Tom Mediano"
+        />
+        <p class="precio">Ref. 1.1</p>
+        <button onclick="agregarAlCarrito('Tom Mediano', 1.1)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 2 -->
+      <div class="producto">
+        <h2>Samba Fresa</h2>
+        <img
+          src="https://grupoleiros.com/image/leiros/GUCM0946.png"
+          alt="Samba Fresa"
+        />
+        <p class="precio">Ref. 0.9</p>
+        <button onclick="agregarAlCarrito('Samba Fresa', 0.9)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Flaquito Rojo</h2>
+        <img
+          src="https://www.idheastore.com/store/wp-content/uploads/Diseno-sin-titulo-96.png"
+          alt="Flaquito Rojo"
+        />
+        <p class="precio">Ref. 0.5</p>
+        <button onclick="agregarAlCarrito('Flaquito Rojo', 0.5)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Flaquito Blanco</h2>
+        <img
+          src="https://chocolatesstmoritz.com/wp-content/uploads/2016/05/stmoritz_flaquito_b_01.jpg"
+          alt="Flaquito Blanco"
+        />
+        <p class="precio">Ref. 0.5</p>
+        <button onclick="agregarAlCarrito('Flaquito Blanco', 0.5)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Galleta Kraker</h2>
+        <img
+          src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10010244un_4.jpg"
+          alt="Galleta Kraker"
+        />
+        <p class="precio">Ref. 0.4</p>
+        <button onclick="agregarAlCarrito('Galleta Kraker', 0.4)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Galleta Hony</h2>
+        <img
+          src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10010243un_4.jpg"
+          alt="Galleta Hony"
+        />
+        <p class="precio">Ref. 0.4</p>
+        <button onclick="agregarAlCarrito('Galleta Hony', 0.4)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Club Social</h2>
+        <img
+          src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10003699un_4.jpg"
+          alt="Galleta Club Social"
+        />
+        <p class="precio">Ref. 0.4</p>
+        <button onclick="agregarAlCarrito('Galleta Club Social', 0.4)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Doritos</h2>
+        <img
+          src="https://vallearriba.elplazas.com/media/catalog/product/cache/3e568157972a1320c1e54e4ca9aac161/1/0/10008036un_3.jpg"
+          alt="Doritos"
+        />
+        <p class="precio">Ref. 1.1</p>
+        <button onclick="agregarAlCarrito('Doritos', 1.1)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Toronto</h2>
+        <img
+          src="https://cdnx.jumpseller.com/tu-super-tm/image/15643891/resize/540/540?1647357068"
+          alt="Toronto"
+        />
+        <p class="precio">Ref. 0.6</p>
+        <button onclick="agregarAlCarrito('Toronto', 0.6)">
+          Agregar al carrito
+        </button>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <h2>Milka</h2>
+        <img
+          src="https://www.tiendashoppi.com/cdn/shop/products/tienda-shoppi-milka-oreo-min.jpg?v=1671828543"
+          alt="Milka"
+        />
+        <p class="precio">Ref. 2.0</p>
+        <button onclick="agregarAlCarrito('Milka', 2.0)">
+          Agregar al carrito
+        </button>
+      </div>
     </section>
 
     <!-- Carrito de compras -->
     <section class="carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="carrito-lista"></ul>
-        <p>Total: <span id="total-precio">0.00</span> USD</p>
-        <button onclick="realizarPago()">Realizar Pago</button>
-        <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-lista"></ul>
+      <p>Total: <span id="total-precio">0.00</span> USD</p>
+      <button onclick="realizarPago()">Realizar Pago</button>
+      <button onclick="limpiarCarrito()">Limpiar Carrito</button>
     </section>
 
     <!-- Métodos de pago -->
     <section class="metodos-pago">
-        <h2>Métodos de Pago</h2>
-        <p>Selecciona tu método de pago preferido:</p>
-        <label><input type="radio" name="metodo-pago" value="pago-movil" checked> Pago Móvil</label><br>
-        <!-- <label><input type="radio" name="metodo-pago" value="efectivo"> Efectivo</label><br> -->
-    </section>    
+      <h2>Métodos de Pago</h2>
+      <p>Selecciona tu método de pago preferido:</p>
+      <label
+        ><input type="radio" name="metodo-pago" value="pago-movil" checked />
+        Pago Móvil</label
+      ><br />
+      <!-- <label><input type="radio" name="metodo-pago" value="efectivo"> Efectivo</label><br> -->
+    </section>
 
     <footer>
-        <p>&copy; 2024 Bodega Osman</p>
+      <p>&copy; 2024 Bodega Osman</p>
     </footer>
 
     <script>
-        let carrito = [];
-        let total = 0;
-  
-        function agregarAlCarrito(nombre, precio) {
-          // Buscar si el producto ya existe en el carrito
-          const productoExistente = carrito.find(
-            (item) => item.nombre === nombre
-          );
-  
-          if (productoExistente) {
-            // Si existe, incrementa la cantidad
-            productoExistente.cantidad += 1;
-          } else {
-            // Si no existe, agrégalo con cantidad 1
-            carrito.push({ nombre, precio, cantidad: 1 });
-          }
-  
-          // Sumar el precio al total
-          total += precio;
-          actualizarCarrito();
-        }
-  
-        function actualizarCarrito() {
-          const carritoLista = document.getElementById("carrito-lista");
-          carritoLista.innerHTML = "";
-          carrito.forEach((item) => {
-            const li = document.createElement("li");
-            li.textContent = `${item.nombre} - $${item.precio} x ${
-              item.cantidad
-            } = $${(item.precio * item.cantidad).toFixed(2)}`;
-            carritoLista.appendChild(li);
-          });
-          document.getElementById("total-precio").textContent = total.toFixed(2);
-        }
-  
-        function limpiarCarrito() {
-          carrito = []; // Vaciar el array de carrito
-          total = 0; // Reiniciar el total a cero
-          actualizarCarrito(); // Actualizar el carrito en pantalla
-        }
-  
-        function realizarPago() {
-          const metodo = document.querySelector(
-            'input[name="metodo-pago"]:checked'
-          ).value;
-          let mensaje = `*Bodega Osman - Pedido*\n\nMétodo de Pago: ${metodo}\n\n*Carrito de Compras:*\n`;
-  
-          carrito.forEach((item) => {
-            mensaje += `- ${item.nombre}: $${item.precio} x ${
-              item.cantidad
-            } = $${(item.precio * item.cantidad).toFixed(2)}\n`;
-          });
-  
-          mensaje += `\n*Total:* $${total.toFixed(2)}`;
-  
-          // Reemplaza '1234567890' con tu número de WhatsApp
-          const numeroWhatsApp = "+584142079800";
-          const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
-            mensaje
-          )}`;
-  
-          // Abrir WhatsApp en una nueva ventana
-          window.open(urlWhatsApp, "_blank");
-        }
-      </script>
+      let carrito = [];
+      let total = 0;
+      let popupTimeout;
 
-</body>
+      function agregarAlCarrito(nombre, precio) {
+        const productoExistente = carrito.find(
+          (item) => item.nombre === nombre
+        );
+        if (productoExistente) {
+          productoExistente.cantidad += 1;
+        } else {
+          carrito.push({ nombre, precio, cantidad: 1 });
+        }
+
+        total += precio;
+        actualizarCarrito();
+
+        // Mostrar el pop-up temporalmente
+        const popup = document.getElementById("popup");
+
+        // Reiniciar la animación removiendo la clase y volviéndola a agregar
+        popup.classList.remove("show");
+        void popup.offsetWidth; // Fuerza el reflujo para reiniciar la animación
+        popup.classList.add("show");
+
+        // Limpia el temporizador anterior, si existe
+        clearTimeout(popupTimeout);
+
+        // Configura un nuevo temporizador para ocultar el pop-up
+        popupTimeout = setTimeout(() => {
+          popup.classList.remove("show");
+        }, 700); // Oculta el pop-up después de 2 segundos del último clic
+      }
+
+      function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        carritoLista.innerHTML = "";
+        carrito.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.nombre} - $${item.precio} x ${
+            item.cantidad
+          } = $${(item.precio * item.cantidad).toFixed(2)}`;
+          carritoLista.appendChild(li);
+        });
+        document.getElementById("total-precio").textContent = total.toFixed(2);
+      }
+
+      function limpiarCarrito() {
+        carrito = []; // Vaciar el array de carrito
+        total = 0; // Reiniciar el total a cero
+        actualizarCarrito(); // Actualizar el carrito en pantalla
+      }
+
+      function realizarPago() {
+        if (carrito.length === 0) {
+          alert(
+            "El carrito está vacío. Agrega productos antes de realizar el pago."
+          );
+          return; // Detiene la ejecución si el carrito está vacío
+        }
+
+        // Si el carrito tiene productos, continúa con el proceso de pago
+        const metodo = document.querySelector(
+          'input[name="metodo-pago"]:checked'
+        ).value;
+
+        let mensaje = `*Bodega Osman - Pedido*\n\nMétodo de Pago: ${metodo}\n\n*Carrito de Compras:*\n`;
+
+        carrito.forEach((item) => {
+          mensaje += `- ${item.nombre}: $${item.precio} x ${
+            item.cantidad
+          } = $${(item.precio * item.cantidad).toFixed(2)}\n`;
+        });
+
+        mensaje += `\n*Total:* $${total.toFixed(2)}`;
+
+        const numeroWhatsApp = "+584142079800";
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+          mensaje
+        )}`;
+
+        // Abre WhatsApp en una nueva ventana
+        window.open(urlWhatsApp, "_blank");
+      }
+    </script>
+
+    <div id="popup" class="popup">
+      <p>¡Agregado al carrito!</p>
+    </div>
+  </body>
 </html>
