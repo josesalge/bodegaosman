@@ -388,9 +388,7 @@
         carritoLista.innerHTML = "";
         carrito.forEach((item) => {
           const li = document.createElement("li");
-          li.textContent = `${item.nombre} - $${item.precio} x ${
-            item.cantidad
-          } = $${(item.precio * item.cantidad).toFixed(2)}`;
+          li.textContent = `${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}`;
           carritoLista.appendChild(li);
         });
         document.getElementById("total-precio").textContent = total.toFixed(2);
@@ -418,9 +416,7 @@
         let mensaje = `*Bodega Osman - Pedido*\n\nMétodo de Pago: ${metodo}\n\n*Carrito de Compras:*\n`;
 
         carrito.forEach((item) => {
-          mensaje += `- ${item.nombre}: $${item.precio} x ${
-            item.cantidad
-          } = $${(item.precio * item.cantidad).toFixed(2)}\n`;
+          mensaje += `- ${item.nombre}: ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}\n`;
         });
 
         mensaje += `\n*Total:* $${total.toFixed(2)}`;
